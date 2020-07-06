@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receiver</title>
+</head>
+<body>
+<script>
+    class _XMLHttpRequest extends XMLHttpRequest {
+        constructor() {
+            return super();
+        }
+
+        set onreadystatechange(callback) {
+            this.onReadyCallback = callback;
+            super.onreadystatechange = event => {
+                callback.call(this, event);
+                if (this.status === 200 && this.readyState === 4) {
+                    postMessage(JSON.stringify({
+                        signature: 'inspector',
+                        response: this.responseText,
+                        headers: this.getAllResponseHeaders()
+                    }));
+                }
+            };
+        }
+
+        set onload(callback) {
+            this.onLoadCallback = callback;
+            super.onload = event => {
+                callback.call(this, event);
+                if (this.status === 200 && this.readyState === 4) {
+                    postMessage(JSON.stringify({
+                        signature: 'inspector',
+                        response: this.responseText,
+                        headers: this.getAllResponseHeaders()
+                    }));
+                }
+            };
+        }
+
+        open(method, url, options) {
+            this.url = url;
+            return super.open(method, this.url, options);
+        }
+
+        send(data) {
+            postMessage(JSON.stringify({
+                signature: 'inspector',
+                url: this.url,
+                request: data
+            }));
+            super.send(data);
+        }
+    }
+
+    window.XMLHttpRequest = _XMLHttpRequest;
+    document.domain = document.domain.substring(document.domain.indexOf('.') + 1, document.domain.length);
+</script>
+</body>
+</html>

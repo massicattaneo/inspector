@@ -1,0 +1,60 @@
+i-notification {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: #d6dce4;
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px 20px 10px 50px;
+    color: #333436;
+    z-index: 999999999;
+    font-family: Arial;
+}
+
+i-notification.show {
+    animation: slide-right 0.5s;
+}
+
+i-notification.hide {
+    animation: fade-out 0.5s;
+}
+
+i-notification strong {
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    top: 5px;
+    display: none;
+}
+
+i-notification i {
+    height: 27px;
+    width: 1px;
+    background: #333436;
+    left: 39px;
+    position: absolute;
+    top: 5px;
+}
+
+i-notification.alert strong.alert {display: block; color: #b67d00;}
+i-notification.info strong.info {display: block; color: var(--main-bg-color);}
+i-notification.success strong.success {display: block; color: #009200;}
+i-notification.error strong.error {display: block; color: #c02502;}
+
+@keyframes slide-right {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: 20px;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,124 @@
+:root {
+    --main-color: #97abb8;
+    --main-bg-color: #003b5dd9;
+    --secondary-bg-color: #142940;
+    --secondary-color: #5c6071;
+    --accent-color: #389bbb;
+    --accent-color-contrast: #0f3542;
+}
+
+.fa:before {font-family: fontawesome;}
+.fa.camera:before {content: "\f030";}
+.fa.play:before {content: "\f04b";}
+.fa.stop:before {content: "\f0c7";}
+.fa.console:before {content: "\f129";}
+.fa.save:before {content: "\f029";}
+.fa.cancel:before {content: "\f05e";}
+.fa.reload:before {content: "\f01e";}
+.fa.delete:before {content: "\f014";}
+.fa.marker:before {content: "\f02e";}
+.fa.exit:before {content: "\f08b";}
+.fa.folder:before {content: "\f07c";}
+.fa.users:before {content: "\f0c0";}
+.fa.recordings:before {content: "\f04b";color: #e01b0d;}
+.fa.games:before {content: "\f11b";}
+.fa.combos:before {content: "\f135";}
+.fa.close:before {content: "\f057";}
+.fa.tests:before {content: "\f0e4";color: #e05e37;}
+.fa.bugs:before {content: "\f188";color: #e0a16c;}
+.fa.devices:before {content: "\f10a";}
+.fa.settings:before {content: "\f013";}
+.fa.close:before {content: "\f057";}
+.fa.add:before {content: "\f055";}
+.fa.undo:before {content: "\f112";}
+.fa.delete:before {content: "\f014";}
+.fa.play:before {content: "\f04b";margin-left: 4px;}
+.fa.dev:before {content: "\f121";}
+.fa.iframe:before {content: "\f2d0";}
+.fa.copy:before {content: "\f24d";}
+.fa.cut:before {content: "\f0c4";}
+.fa.sessions:before {content: "\f16c";color: #bf86ad;}
+.fa.view:before {content: "\f06e";}
+.fa.statistics:before {content: "\f080";color: #bf1595;}
+.fa.plugins:before {content: "\f1e6";color: #bf52a8;}
+.fa.rerun:before {content: "\f021";}
+.fa.alert:before {content: "\f071";}
+.fa.info:before {content: "\f05a";}
+.fa.error:before {content: "\f057";}
+.fa.success:before {content: "\f058";}
+.fa.download:before {content: "\f019";}
+.fa.timeline:before {content: "\f017";}
+.fa.edit:before {content: "\f044";}
+.fa.storage:before {content: "\f0a0";}
+
+.inspector-bullet {
+    height: 6px;
+    width: 6px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    margin: 3px;
+    border-radius: 6px;
+}
+
+.no-selectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+@keyframes effect-tap {
+    50% {
+        transform: scale(2, 2);
+        opacity: 0;
+    }
+    99% {
+        transform: scale(0.001, 0.001);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.001, 0.001);
+        opacity: 1;
+    }
+}
+
+.effect-tap {
+    animation: effect-tap 0.8s ease-out;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 100px;
+    z-index: 999999999;
+    color: #000000;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    font-family: Arial;
+}
+
+i-window {
+    background: #003b5d85 !important;
+}
+
+i-window .vis-time-axis .vis-text {
+    color: #fff;
+}
+
+i-window .settings input, i-window .settings textarea, i-window .settings select, i-window .settings label {
+    font-size: 15px;
+}
+
+.inspector-block-interactions {
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999997;
+}

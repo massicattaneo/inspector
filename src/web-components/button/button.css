@@ -1,0 +1,47 @@
+i-button {
+    touch-action: manipulation;
+    font-size: 16px;
+    position: relative;
+    flex: 1 1 auto;
+    margin: 0;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 1) 0%, rgba(124, 128, 147, 1) 60%);
+    min-width: auto;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    color: #0f0f0f;
+    width: 23px;
+    height: 23px;
+    line-height: 25px;
+    text-align: center;
+    top: -1px;
+}
+i-button:hover {
+    color: #590057;
+}
+
+i-button.fa:before {
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+    font-family: FontAwesome;
+}
+
+i-button:active {
+    transform: scale(1.05, 1.05);
+}
+
+i-button.unchecked {
+    background: radial-gradient(circle at top right, rgb(135, 129, 129) 0%, rgb(63, 54, 54) 60%);
+    color: #727272;
+}
+
+i-button.checked {
+    background: radial-gradient(circle at top right, rgb(255, 255, 255) 0%, rgb(175, 197, 171) 60%);
+}
+
+
+

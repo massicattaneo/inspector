@@ -1,0 +1,62 @@
+{
+  "name": "inspector",
+  "version": "1.0.0",
+  "description": "Inspectioning tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "build": "webpack --config=./webpack.config.production.js",
+    "start": "webpack-dev-server --config=./webpack.config.development.js",
+    "lint": "eslint --fix src",
+    "prettier": "prettier --write \"./src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/massicattaneo/inspector.git"
+  },
+  "author": "mcattaneo",
+  "license": "ISC",
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(spec|test).js?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "dist/",
+      "node_modules/"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "text-summary"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/runtime": "^7.0.0-beta.55",
+    "babel-loader": "^8.0.6",
+    "codemirror": "^5.51.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.0",
+    "fast-async": "^7.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "jsoneditor": "^9.0.0",
+    "prettier": "^1.19.1",
+    "require-context": "^1.1.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "style-loader": "^1.1.2",
+    "vis-timeline": "^7.0.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

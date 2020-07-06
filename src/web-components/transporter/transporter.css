@@ -1,0 +1,166 @@
+canvas {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+i-transporter {
+    position: fixed;
+    background-color: var(--main-bg-color);
+    z-index: 999999998;
+    top: 10px;
+    left: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 60px;
+    font-size: 16px;
+}
+
+i-transporter.collapsed {
+    width: 30px;
+    display: block;
+}
+
+i-transporter .draggable {
+    height: 45px;
+    width: 28px;
+    position: relative;
+    cursor: move;
+    flex: 1 1 auto;
+}
+
+.inspector-bullet {
+    height: 6px;
+    width: 6px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    margin: 3px;
+    border-radius: 6px;
+}
+
+i-transporter .divider {
+    position: relative;
+    top: 4px;
+    flex: 1 1 auto;
+    height: 36px;
+    width: 2px;
+    margin: 0 1px;
+    background-color: var(--secondary-color);
+}
+
+i-transporter.collapsed .divider,
+i-transporter.puppeteer-testing,
+i-transporter.collapsed .time,
+i-transporter.collapsed i-button{
+    display: none !important;
+}
+
+i-transporter i-button.marker {
+    display: inline-block;
+}
+
+i-transporter i-button {
+    height: 36px;
+    width: 36px;
+    line-height: 39px;
+    font-size: 24px;
+    margin: 5px 2px;
+    color: #0d324f;
+}
+
+i-transporter .time {
+    position: absolute;
+    left: 115px;
+    top: 43px;
+    background: black;
+    height: 15px;
+    border-radius: 4px;
+    color: #6fc6f8;
+    font-family: monospace;
+    padding: 0 7px;
+    font-size: 13px;
+}
+
+i-transporter.inspector-desktop .fa.exit {
+    display: none;
+}
+i-transporter button.fa.exit:before {
+    padding: 0;
+    margin: 0;
+    line-height: 20px;
+    transform: scale(-1);
+    display: inline-block;
+    position: relative;
+    left: -2px;
+    top: -1px;
+}
+.inspector-mobile i-transporter .fa.camera {
+    display: none;
+}
+
+i-transporter i-button.folder, i-transporter i-button.edit, i-transporter i-button.timeline, i-transporter i-button.storage  {
+    position: absolute;
+    height: 16px;
+    width: 36px;
+    font-size: 13px;
+    line-height: 8px;
+    top: 37px;
+    left: 32px;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+i-transporter i-button.timeline {
+    left: 72px;
+}
+
+i-transporter i-button.storage {
+    left: 200px;
+}
+
+i-transporter i-button.play {
+    background: radial-gradient(circle at top right, rgb(234, 243, 168) 0%, rgb(66, 186, 66) 60%);
+    animation: progress 1s infinite;
+    color: #0d3d2f;
+}
+
+i-transporter i-button.edit {
+    display: none;
+}
+i-transporter.replay-mode i-button.edit {
+    display: block;
+}
+i-transporter.replay-mode i-button.folder {
+    display: none;
+}
+
+i-transporter i-button.play {
+    display: none;
+}
+i-transporter i-button.stop {
+    display: inline-block;
+}
+i-transporter.replay-mode i-button.play {
+    display: inline-block;;
+}
+i-transporter.replay-mode i-button.stop {
+    display: none;
+}
+
+@keyframes progress {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+

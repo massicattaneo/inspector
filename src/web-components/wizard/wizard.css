@@ -1,0 +1,62 @@
+i-wizard form {
+    width: 100%;
+}
+
+i-wizard form .input {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+
+i-wizard .button {
+    position: relative;
+    float: right;
+    width: auto;
+    margin: 2px 20px 0 0;
+    padding: 5px 20px 5px 5px;
+    cursor: pointer;
+    border: none;
+    font-family: "Courier New";
+    font-size: 15px;
+    color: white;
+}
+
+i-wizard .button.save {
+    background-color: green;
+}
+
+i-wizard .button.cancel {
+    background-color: red;
+}
+
+i-wizard .button:before {
+    margin-right: 5px;
+}
+
+i-wizard .button span {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+i-wizard h3 {
+    margin: 0 0 5px 0;
+    text-align: center;
+    background: var(--secondary-bg-color);
+}
+
+i-wizard h4 {
+    margin: 0;
+    text-align: center;
+}
+
+i-wizard input, i-wizard textarea, i-wizard select, i-wizard label, i-wizard button{
+    font-family: "Courier New";
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: var(--main-bg-color);
+    color: white;
+    width: calc(100% - 200px);
+}
